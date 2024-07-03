@@ -3,7 +3,6 @@ Feature: PetStore
 
   @crear
   Scenario Outline: Crear orden
-    #No quiere reconocer el step def con el tipo int, solo cuando pongo la variable entre "" reconoce el step
     Given creo un pedido con id: "<id>", petId: "<petId>", quantity: "<quantity>", shipDate: "<shipDate>", status: "<status>", y complete: "<complete>"
     Then el código de respuesta es 200
     And el type es "unknown"

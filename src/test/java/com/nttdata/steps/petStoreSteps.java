@@ -7,9 +7,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class petStoreSteps {
 
-    private static String CREATE_ORDER = "https://petstore.swagger.io/v2/store/order";
-
-    public void CrearPedido(int id, int petId, int cantidad, String fecha, String status, boolean estOrden) {
+    public void CrearPedido(String id, String petId, String cantidad, String fecha, String status, String estOrden) {
+        String CREATE_ORDER = "https://petstore.swagger.io/v2/store/order";
         SerenityRest.given()
                 .contentType("application/json")
                 .relaxedHTTPSValidation()
